@@ -1,0 +1,634 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		33F10F0B26DCDF140028A4C2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33F10F0A26DCDF140028A4C2 /* AppDelegate.swift */; };
+		33F10F0D26DCDF140028A4C2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33F10F0C26DCDF140028A4C2 /* SceneDelegate.swift */; };
+		33F10F1226DCDF140028A4C2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 33F10F1026DCDF140028A4C2 /* Main.storyboard */; };
+		33F10F1426DCDF160028A4C2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 33F10F1326DCDF160028A4C2 /* Assets.xcassets */; };
+		33F10F1726DCDF160028A4C2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 33F10F1526DCDF160028A4C2 /* LaunchScreen.storyboard */; };
+		33F10F2226DCDF170028A4C2 /* Opayn_MerchantTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33F10F2126DCDF170028A4C2 /* Opayn_MerchantTests.swift */; };
+		33F10F2D26DCDF170028A4C2 /* Opayn_MerchantUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33F10F2C26DCDF170028A4C2 /* Opayn_MerchantUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		33F10F1E26DCDF170028A4C2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 33F10EFF26DCDF140028A4C2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 33F10F0626DCDF140028A4C2;
+			remoteInfo = "Opayn Merchant";
+		};
+		33F10F2926DCDF170028A4C2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 33F10EFF26DCDF140028A4C2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 33F10F0626DCDF140028A4C2;
+			remoteInfo = "Opayn Merchant";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		33F10F0726DCDF140028A4C2 /* Opayn Merchant.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Opayn Merchant.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		33F10F0A26DCDF140028A4C2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		33F10F0C26DCDF140028A4C2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		33F10F1126DCDF140028A4C2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		33F10F1326DCDF160028A4C2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		33F10F1626DCDF160028A4C2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		33F10F1826DCDF160028A4C2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		33F10F1D26DCDF170028A4C2 /* Opayn MerchantTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Opayn MerchantTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		33F10F2126DCDF170028A4C2 /* Opayn_MerchantTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Opayn_MerchantTests.swift; sourceTree = "<group>"; };
+		33F10F2326DCDF170028A4C2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		33F10F2826DCDF170028A4C2 /* Opayn MerchantUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Opayn MerchantUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		33F10F2C26DCDF170028A4C2 /* Opayn_MerchantUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Opayn_MerchantUITests.swift; sourceTree = "<group>"; };
+		33F10F2E26DCDF170028A4C2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		33F10F0426DCDF140028A4C2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		33F10F1A26DCDF170028A4C2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		33F10F2526DCDF170028A4C2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		33F10EFE26DCDF140028A4C2 = {
+			isa = PBXGroup;
+			children = (
+				33F10F0926DCDF140028A4C2 /* Opayn Merchant */,
+				33F10F2026DCDF170028A4C2 /* Opayn MerchantTests */,
+				33F10F2B26DCDF170028A4C2 /* Opayn MerchantUITests */,
+				33F10F0826DCDF140028A4C2 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		33F10F0826DCDF140028A4C2 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				33F10F0726DCDF140028A4C2 /* Opayn Merchant.app */,
+				33F10F1D26DCDF170028A4C2 /* Opayn MerchantTests.xctest */,
+				33F10F2826DCDF170028A4C2 /* Opayn MerchantUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		33F10F0926DCDF140028A4C2 /* Opayn Merchant */ = {
+			isa = PBXGroup;
+			children = (
+				33F10F3A26DCDFEA0028A4C2 /* Models */,
+				33F10F3B26DCDFF20028A4C2 /* View-Controllers */,
+				33F10F3C26DCE00F0028A4C2 /* ViewModels */,
+				33F10F3D26DCE01E0028A4C2 /* App Life Cycle */,
+				33F10F3E26DCE03D0028A4C2 /* StoryBoards */,
+				33F10F1326DCDF160028A4C2 /* Assets.xcassets */,
+				33F10F1826DCDF160028A4C2 /* Info.plist */,
+			);
+			path = "Opayn Merchant";
+			sourceTree = "<group>";
+		};
+		33F10F2026DCDF170028A4C2 /* Opayn MerchantTests */ = {
+			isa = PBXGroup;
+			children = (
+				33F10F2126DCDF170028A4C2 /* Opayn_MerchantTests.swift */,
+				33F10F2326DCDF170028A4C2 /* Info.plist */,
+			);
+			path = "Opayn MerchantTests";
+			sourceTree = "<group>";
+		};
+		33F10F2B26DCDF170028A4C2 /* Opayn MerchantUITests */ = {
+			isa = PBXGroup;
+			children = (
+				33F10F2C26DCDF170028A4C2 /* Opayn_MerchantUITests.swift */,
+				33F10F2E26DCDF170028A4C2 /* Info.plist */,
+			);
+			path = "Opayn MerchantUITests";
+			sourceTree = "<group>";
+		};
+		33F10F3A26DCDFEA0028A4C2 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		33F10F3B26DCDFF20028A4C2 /* View-Controllers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "View-Controllers";
+			sourceTree = "<group>";
+		};
+		33F10F3C26DCE00F0028A4C2 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		33F10F3D26DCE01E0028A4C2 /* App Life Cycle */ = {
+			isa = PBXGroup;
+			children = (
+				33F10F0A26DCDF140028A4C2 /* AppDelegate.swift */,
+				33F10F0C26DCDF140028A4C2 /* SceneDelegate.swift */,
+			);
+			path = "App Life Cycle";
+			sourceTree = "<group>";
+		};
+		33F10F3E26DCE03D0028A4C2 /* StoryBoards */ = {
+			isa = PBXGroup;
+			children = (
+				33F10F1526DCDF160028A4C2 /* LaunchScreen.storyboard */,
+				33F10F1026DCDF140028A4C2 /* Main.storyboard */,
+			);
+			path = StoryBoards;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		33F10F0626DCDF140028A4C2 /* Opayn Merchant */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 33F10F3126DCDF170028A4C2 /* Build configuration list for PBXNativeTarget "Opayn Merchant" */;
+			buildPhases = (
+				33F10F0326DCDF140028A4C2 /* Sources */,
+				33F10F0426DCDF140028A4C2 /* Frameworks */,
+				33F10F0526DCDF140028A4C2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Opayn Merchant";
+			productName = "Opayn Merchant";
+			productReference = 33F10F0726DCDF140028A4C2 /* Opayn Merchant.app */;
+			productType = "com.apple.product-type.application";
+		};
+		33F10F1C26DCDF170028A4C2 /* Opayn MerchantTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 33F10F3426DCDF170028A4C2 /* Build configuration list for PBXNativeTarget "Opayn MerchantTests" */;
+			buildPhases = (
+				33F10F1926DCDF170028A4C2 /* Sources */,
+				33F10F1A26DCDF170028A4C2 /* Frameworks */,
+				33F10F1B26DCDF170028A4C2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				33F10F1F26DCDF170028A4C2 /* PBXTargetDependency */,
+			);
+			name = "Opayn MerchantTests";
+			productName = "Opayn MerchantTests";
+			productReference = 33F10F1D26DCDF170028A4C2 /* Opayn MerchantTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		33F10F2726DCDF170028A4C2 /* Opayn MerchantUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 33F10F3726DCDF170028A4C2 /* Build configuration list for PBXNativeTarget "Opayn MerchantUITests" */;
+			buildPhases = (
+				33F10F2426DCDF170028A4C2 /* Sources */,
+				33F10F2526DCDF170028A4C2 /* Frameworks */,
+				33F10F2626DCDF170028A4C2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				33F10F2A26DCDF170028A4C2 /* PBXTargetDependency */,
+			);
+			name = "Opayn MerchantUITests";
+			productName = "Opayn MerchantUITests";
+			productReference = 33F10F2826DCDF170028A4C2 /* Opayn MerchantUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		33F10EFF26DCDF140028A4C2 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1250;
+				LastUpgradeCheck = 1250;
+				TargetAttributes = {
+					33F10F0626DCDF140028A4C2 = {
+						CreatedOnToolsVersion = 12.5.1;
+					};
+					33F10F1C26DCDF170028A4C2 = {
+						CreatedOnToolsVersion = 12.5.1;
+						TestTargetID = 33F10F0626DCDF140028A4C2;
+					};
+					33F10F2726DCDF170028A4C2 = {
+						CreatedOnToolsVersion = 12.5.1;
+						TestTargetID = 33F10F0626DCDF140028A4C2;
+					};
+				};
+			};
+			buildConfigurationList = 33F10F0226DCDF140028A4C2 /* Build configuration list for PBXProject "Opayn Merchant" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 33F10EFE26DCDF140028A4C2;
+			productRefGroup = 33F10F0826DCDF140028A4C2 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				33F10F0626DCDF140028A4C2 /* Opayn Merchant */,
+				33F10F1C26DCDF170028A4C2 /* Opayn MerchantTests */,
+				33F10F2726DCDF170028A4C2 /* Opayn MerchantUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		33F10F0526DCDF140028A4C2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				33F10F1726DCDF160028A4C2 /* LaunchScreen.storyboard in Resources */,
+				33F10F1426DCDF160028A4C2 /* Assets.xcassets in Resources */,
+				33F10F1226DCDF140028A4C2 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		33F10F1B26DCDF170028A4C2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		33F10F2626DCDF170028A4C2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		33F10F0326DCDF140028A4C2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				33F10F0B26DCDF140028A4C2 /* AppDelegate.swift in Sources */,
+				33F10F0D26DCDF140028A4C2 /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		33F10F1926DCDF170028A4C2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				33F10F2226DCDF170028A4C2 /* Opayn_MerchantTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		33F10F2426DCDF170028A4C2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				33F10F2D26DCDF170028A4C2 /* Opayn_MerchantUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		33F10F1F26DCDF170028A4C2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 33F10F0626DCDF140028A4C2 /* Opayn Merchant */;
+			targetProxy = 33F10F1E26DCDF170028A4C2 /* PBXContainerItemProxy */;
+		};
+		33F10F2A26DCDF170028A4C2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 33F10F0626DCDF140028A4C2 /* Opayn Merchant */;
+			targetProxy = 33F10F2926DCDF170028A4C2 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		33F10F1026DCDF140028A4C2 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				33F10F1126DCDF140028A4C2 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		33F10F1526DCDF160028A4C2 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				33F10F1626DCDF160028A4C2 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		33F10F2F26DCDF170028A4C2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		33F10F3026DCDF170028A4C2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		33F10F3226DCDF170028A4C2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 39C6F55X9T;
+				INFOPLIST_FILE = "Opayn Merchant/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.opaynKart.Opayn-Merchant";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		33F10F3326DCDF170028A4C2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 39C6F55X9T;
+				INFOPLIST_FILE = "Opayn Merchant/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.opaynKart.Opayn-Merchant";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		33F10F3526DCDF170028A4C2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 39C6F55X9T;
+				INFOPLIST_FILE = "Opayn MerchantTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.opaynKart.Opayn-MerchantTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Opayn Merchant.app/Opayn Merchant";
+			};
+			name = Debug;
+		};
+		33F10F3626DCDF170028A4C2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 39C6F55X9T;
+				INFOPLIST_FILE = "Opayn MerchantTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.opaynKart.Opayn-MerchantTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Opayn Merchant.app/Opayn Merchant";
+			};
+			name = Release;
+		};
+		33F10F3826DCDF170028A4C2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 39C6F55X9T;
+				INFOPLIST_FILE = "Opayn MerchantUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.opaynKart.Opayn-MerchantUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Opayn Merchant";
+			};
+			name = Debug;
+		};
+		33F10F3926DCDF170028A4C2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 39C6F55X9T;
+				INFOPLIST_FILE = "Opayn MerchantUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.opaynKart.Opayn-MerchantUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Opayn Merchant";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		33F10F0226DCDF140028A4C2 /* Build configuration list for PBXProject "Opayn Merchant" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				33F10F2F26DCDF170028A4C2 /* Debug */,
+				33F10F3026DCDF170028A4C2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		33F10F3126DCDF170028A4C2 /* Build configuration list for PBXNativeTarget "Opayn Merchant" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				33F10F3226DCDF170028A4C2 /* Debug */,
+				33F10F3326DCDF170028A4C2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		33F10F3426DCDF170028A4C2 /* Build configuration list for PBXNativeTarget "Opayn MerchantTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				33F10F3526DCDF170028A4C2 /* Debug */,
+				33F10F3626DCDF170028A4C2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		33F10F3726DCDF170028A4C2 /* Build configuration list for PBXNativeTarget "Opayn MerchantUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				33F10F3826DCDF170028A4C2 /* Debug */,
+				33F10F3926DCDF170028A4C2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 33F10EFF26DCDF140028A4C2 /* Project object */;
+}
