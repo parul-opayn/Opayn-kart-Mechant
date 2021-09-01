@@ -1,0 +1,62 @@
+PODS:
+  - Alamofire (5.4.3)
+  - DropDown (2.3.13)
+  - GrowingTextView (0.7.2)
+  - IQKeyboardManagerSwift (6.5.6)
+  - OpalImagePicker (3.0.0)
+  - RangeSeekSlider (1.8.0)
+  - SDWebImage (5.11.1):
+    - SDWebImage/Core (= 5.11.1)
+  - SDWebImage/Core (5.11.1)
+  - SideMenu (6.5.0)
+  - SkeletonView (1.5)
+  - SnackBar.swift (0.1.0):
+    - SnapKit
+  - SnapKit (5.0.1)
+  - TOCropViewController (2.6.0)
+
+DEPENDENCIES:
+  - Alamofire
+  - DropDown
+  - GrowingTextView
+  - IQKeyboardManagerSwift
+  - OpalImagePicker
+  - RangeSeekSlider
+  - SDWebImage
+  - SideMenu
+  - SkeletonView (= 1.5.0)
+  - SnackBar.swift (= 0.1.0)
+  - TOCropViewController
+
+SPEC REPOS:
+  trunk:
+    - Alamofire
+    - DropDown
+    - GrowingTextView
+    - IQKeyboardManagerSwift
+    - OpalImagePicker
+    - RangeSeekSlider
+    - SDWebImage
+    - SideMenu
+    - SkeletonView
+    - SnackBar.swift
+    - SnapKit
+    - TOCropViewController
+
+SPEC CHECKSUMS:
+  Alamofire: e447a2774a40c996748296fa2c55112fdbbc42f9
+  DropDown: 8a2116376c1981888557f72ec2ffc9a5e0e456ec
+  GrowingTextView: 876bf42005b5e4a4fd740597db12caaf41f0fe6c
+  IQKeyboardManagerSwift: c7df9d2deb356c04522f5c4b7b6e4ce4d8ed94fe
+  OpalImagePicker: 38e772dd93a54431fc516b33e1f337c50f745834
+  RangeSeekSlider: 650b11fa1edcb92e1e0ede797669d98622570fb5
+  SDWebImage: a7f831e1a65eb5e285e3fb046a23fcfbf08e696d
+  SideMenu: f583187d21c5b1dd04c72002be544b555a2627a2
+  SkeletonView: 6cbb80f82f8bdee3f9093e2fa03b84819b4bd826
+  SnackBar.swift: 79ea4df13ea9e6633137dd6acbd490534d26440d
+  SnapKit: 97b92857e3df3a0c71833cce143274bf6ef8e5eb
+  TOCropViewController: 3105367e808b7d3d886a74ff59bf4804e7d3ab38
+
+PODFILE CHECKSUM: 7127a6d3face5e459e1eab956841cdd8948edf8e
+
+COCOAPODS: 1.10.1
