@@ -13,10 +13,32 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
-        // Use this method to optionally configure and attach the UIWindow `window` to the provided UIWindowScene `scene`.
-        // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
-        // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
-        guard let _ = (scene as? UIWindowScene) else { return }
+       
+        guard let windowScene = (scene as? UIWindowScene) else { return }
+        
+        let window = UIWindow(windowScene: windowScene)
+        
+        let SB = UIStoryboard(name: "Main", bundle: nil)
+        
+        if UserDefaults.standard.value(forKey: "userData") == nil{
+           
+            let vc = SB.instantiateViewController(identifier: "LoginViewController") as! LoginViewController
+            let navigationCont = UINavigationController(rootViewController: vc)
+            navigationCont.navigationBar.barTintColor = UIColor(named: "MainOrange")
+            window.rootViewController = navigationCont
+            self.window = window
+            window.makeKeyAndVisible()
+        }
+        else{
+            let vc = SB.instantiateViewController(identifier: "ProductsListViewController") as! ProductsListViewController
+            let navigationCont = UINavigationController(rootViewController: vc)
+            navigationCont.navigationBar.barTintColor = UIColor(named: "MainOrange")
+            window.rootViewController = navigationCont
+            window.rootViewController = navigationCont
+            self.window = window
+            window.makeKeyAndVisible()
+        
+        }
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {
