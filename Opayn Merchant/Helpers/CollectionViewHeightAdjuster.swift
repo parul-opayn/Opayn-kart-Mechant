@@ -7,14 +7,15 @@
 import Foundation
 import UIKit
 
-class DynamicHeightCollectionView: UICollectionView {
-    override func layoutSubviews() {
-        super.layoutSubviews()
-        if bounds.size != intrinsicContentSize {
-            self.invalidateIntrinsicContentSize()
-        }
+class SelfSizedCollectionView: UICollectionView {
+    override func reloadData() {
+        super.reloadData()
+        self.invalidateIntrinsicContentSize()
     }
+
     override var intrinsicContentSize: CGSize {
-        return collectionViewLayout.collectionViewContentSize
+        let s = self.collectionViewLayout.collectionViewContentSize
+        return CGSize(width: max(s.width, 1), height: max(s.height,1))
     }
+
 }

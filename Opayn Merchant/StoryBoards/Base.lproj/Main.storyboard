@@ -1441,7 +1441,7 @@
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jDa-IO-lBu" customClass="SetView" customModule="Opayn_Merchant" customModuleProvider="target">
                                                                 <rect key="frame" x="0.0" y="0.0" width="181" height="50"/>
                                                                 <subviews>
-                                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Price" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="C5Q-hJ-Y7c">
+                                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Sale Price" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="C5Q-hJ-Y7c">
                                                                         <rect key="frame" x="8" y="8" width="165" height="34"/>
                                                                         <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="17"/>
                                                                         <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
@@ -1469,7 +1469,7 @@
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="77z-de-tqF" customClass="SetView" customModule="Opayn_Merchant" customModuleProvider="target">
                                                                 <rect key="frame" x="197" y="0.0" width="181" height="50"/>
                                                                 <subviews>
-                                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Discount" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="IfL-Vp-Fm2">
+                                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Regular Price" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="IfL-Vp-Fm2">
                                                                         <rect key="frame" x="8" y="8" width="165" height="34"/>
                                                                         <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="17"/>
                                                                         <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
@@ -1562,24 +1562,24 @@
                                                     <constraint firstAttribute="height" constant="170" id="qsZ-g8-AdK"/>
                                                 </constraints>
                                                 <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="fKa-3z-Hw8">
-                                                    <size key="itemSize" width="151" height="135"/>
+                                                    <size key="itemSize" width="375" height="168"/>
                                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                                 </collectionViewFlowLayout>
                                                 <cells>
                                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ImagesCollectionViewCell" id="xvm-F6-0cl" customClass="ImagesCollectionViewCell" customModule="Opayn_Merchant" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="17.5" width="151" height="135"/>
+                                                        <rect key="frame" x="0.0" y="1" width="375" height="168"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="ckg-Dh-AWy">
-                                                            <rect key="frame" x="0.0" y="0.0" width="151" height="135"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="375" height="168"/>
                                                             <autoresizingMask key="autoresizingMask"/>
                                                             <subviews>
                                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="x3P-5X-f2R" customClass="SetView" customModule="Opayn_Merchant" customModuleProvider="target">
-                                                                    <rect key="frame" x="8" y="8" width="135" height="119"/>
+                                                                    <rect key="frame" x="8" y="8" width="359" height="152"/>
                                                                     <subviews>
                                                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="E8l-Mx-fxQ">
-                                                                            <rect key="frame" x="4" y="4" width="127" height="111"/>
+                                                                            <rect key="frame" x="4" y="4" width="351" height="144"/>
                                                                         </imageView>
                                                                     </subviews>
                                                                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -1602,7 +1602,7 @@
                                                                     </userDefinedRuntimeAttributes>
                                                                 </view>
                                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bxZ-tn-mY8">
-                                                                    <rect key="frame" x="131" y="0.0" width="20" height="22"/>
+                                                                    <rect key="frame" x="355" y="0.0" width="20" height="22"/>
                                                                     <constraints>
                                                                         <constraint firstAttribute="height" constant="22" id="Wsu-rX-IBf"/>
                                                                         <constraint firstAttribute="width" constant="20" id="bMw-JJ-mri"/>
@@ -1620,6 +1620,7 @@
                                                                 <constraint firstAttribute="bottom" secondItem="x3P-5X-f2R" secondAttribute="bottom" constant="8" id="qP9-ja-woh"/>
                                                             </constraints>
                                                         </collectionViewCellContentView>
+                                                        <size key="customSize" width="375" height="168"/>
                                                         <connections>
                                                             <outlet property="deleteImageBtn" destination="bxZ-tn-mY8" id="4id-A7-c3j"/>
                                                             <outlet property="productImageView" destination="E8l-Mx-fxQ" id="yBk-xU-BnV"/>
@@ -1641,6 +1642,9 @@
                                                         <real key="value" value="8"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="tappedAddProduct:" destination="JfG-Xi-OvX" eventType="touchUpInside" id="tMa-sX-eqt"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -1690,10 +1694,13 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="addProductBtn" destination="ofE-FT-ixS" id="mmZ-q6-dHa"/>
                         <outlet property="categoryLbl" destination="xhV-bm-eII" id="QLX-tc-GeU"/>
-                        <outlet property="collectionHeight" destination="qsZ-g8-AdK" id="6ea-Gt-IEL"/>
+                        <outlet property="collectionHeight" destination="qsZ-g8-AdK" id="0oS-Mr-QF5"/>
                         <outlet property="descriptionTxtView" destination="WwH-Gf-8VZ" id="C3P-6j-DC8"/>
                         <outlet property="imagesCollectionView" destination="RHs-Uk-lOy" id="QjU-93-IH3"/>
+                        <outlet property="regularPriceTxtFld" destination="IfL-Vp-Fm2" id="KgW-GB-Uzt"/>
+                        <outlet property="salePriceTxtFld" destination="C5Q-hJ-Y7c" id="P4j-hd-RF0"/>
                         <outlet property="subcategoryLbl" destination="pCE-s2-uGt" id="hO4-RC-c3x"/>
                         <outlet property="titleTxtFld" destination="ekS-bp-gSm" id="qIh-6p-t29"/>
                     </connections>

@@ -99,6 +99,7 @@ extension SideMenuViewController:UITableViewDelegate,UITableViewDataSource{
         case 0:
             self.dismiss(animated: true) {
                 let vc = self.storyboard?.instantiateViewController(withIdentifier: "AddProductViewController") as! AddProductViewController
+                vc.displayDataFor = .add
                 self.viewController.navigationController?.pushViewController(vc, animated: true)
             }
           

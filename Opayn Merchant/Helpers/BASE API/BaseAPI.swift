@@ -168,7 +168,13 @@ func hitApiWithMultipleFile(requests : RequestFilesData , completion : @escaping
     
     request.httpMethod = requests.method.rawValue
     
+    request.allHTTPHeaderFields = requests.headers ?? [:]
+    
     let parameters = requests.parameters ?? [:]
+    
+    defer {
+        print(parameters)
+    }
     
     if requests.parameters != nil {
         do {
@@ -185,6 +191,34 @@ func hitApiWithMultipleFile(requests : RequestFilesData , completion : @escaping
             
             multipart_FormData.append(requests.fileData[i], withName: requests.fileparam[i], fileName: requests.fileName[i], mimeType: requests.fileMimetype[i])
             
+            for (key, value) in parameters {
+                
+                if let array = value as? [AnyObject] {
+                    
+                    for i in array {
+                        multipart_FormData.append(String(describing: i).data(using: String.Encoding.utf8)!, withName: key as String)
+                    }
+                    
+                    /*   if let jsonData = try? JSONSerialization.data(withJSONObject: value, options:[]) {
+                     multipart_FormData.append(jsonData, withName: key as String)
+                     _}
+                     _            */
+                    
+                }else if let _ = value as? Parameters {
+                    
+                    if let jsonData = try? JSONSerialization.data(withJSONObject: value, options:[]) {
+                        multipart_FormData.append(jsonData, withName: key as String)
+                    }
+                    
+                } else {
+                    multipart_FormData.append("\(value)".data(using: String.Encoding.utf8)!, withName: key as String)
+                    
+                }
+                
+            }
+        }
+        
+        if requests.numberOfFiles == 0{
             for (key, value) in parameters {
                 
                 if let array = value as? [AnyObject] {

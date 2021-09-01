@@ -27,6 +27,12 @@ enum APISuffix {
     case userAddressList
     case myOrders
     case filters
+    case addProduct
+    case productList
+    case deleteProduct(String)
+    case editProduct
+    case updateProduct
+    case deleteImage
     
     func getDescription() -> String {
         
@@ -87,6 +93,24 @@ enum APISuffix {
             
         case .filters:
             return "filters"
+            
+        case .addProduct:
+            return "api/v1/add-product"
+            
+        case .productList:
+            return "api/v1/product-listing"
+            
+        case .deleteProduct(let productId):
+            return "api/v1/product/\(productId)"
+            
+        case .editProduct:
+            return "v1/update-product"
+            
+        case .updateProduct:
+            return "api/v1/update-product"
+            
+        case .deleteImage:
+            return "api/v1/delete-product-image"
         }
         
     }

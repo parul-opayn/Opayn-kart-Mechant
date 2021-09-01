@@ -15,12 +15,18 @@ class ProductsListViewController: UIViewController {
     
     //MARK:- Variables
     
+    var viewModel = ProductsCategoryViewModel()
+    let refershControl = UIRefreshControl()
+    
     //MARK:- Life Cycle Methods
     
     override func viewDidLoad() {
         super.viewDidLoad()
         productsListTableView.delegate = self
         productsListTableView.dataSource = self
+        productsListAPI()
+        self.productsListTableView.refreshControl = self.refershControl
+        refershControl.addTarget(self, action: #selector(refreshView(refresh:)), for: .editingChanged)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -32,6 +38,16 @@ class ProductsListViewController: UIViewController {
     
     //MARK:- Objc Methods
     
+    @objc func refreshView(refresh:UIRefreshControl){
+        if !productsListTableView.isDragging {
+            print("refer")
+            self.refershControl.endRefreshing()
+            self.productsListAPI()
+        }
+       
+        refresh.endRefreshing()
+    }
+    
     //MARK:- IBActions
        
 }
@@ -41,12 +57,15 @@ class ProductsListViewController: UIViewController {
 
 extension ProductsListViewController:UITableViewDelegate,UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        return viewModel.productsListModel.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = productsListTableView.dequeueReusableCell(withIdentifier: "ProductsListTableViewCell") as! ProductsListTableViewCell
         cell.productImage.changeLayout()
+        let model = viewModel.productsListModel[indexPath.row]
+        cell.productImage.sd_setImage(with: URL(string: model.images?.first ?? ""), placeholderImage: #imageLiteral(resourceName: "placeholder Image"), options: .highPriority, context: nil)
+        cell.productNameLbl.text = model.name ?? ""
         return cell
     }
     
@@ -60,13 +79,17 @@ extension ProductsListViewController:UITableViewDelegate,UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
         let deleteAction = UIContextualAction(style: .normal, title: "", handler: {a,b,c in
-            
+            self.deleteProduct(for: self.viewModel.productsListModel[indexPath.row].id ?? "", at: indexPath.row)
         })
         
         let editAction = UIContextualAction(style: .normal, title: "", handler: {a,b,c in
-            
+            let vc = self.storyboard?.instantiateViewController(identifier: "AddProductViewController") as! AddProductViewController
+            vc.editForIndex = indexPath.row
+            vc.viewModel = self.viewModel
+            vc.displayDataFor = .edit
+            self.navigationController?.pushViewController(vc, animated: true)
         })
-//
+
         deleteAction.image = UIImage(named: "delete")?.withTintColor(.black)
         editAction.image = UIImage(named: "edit-1")
         deleteAction.backgroundColor = .clear
@@ -76,4 +99,50 @@ extension ProductsListViewController:UITableViewDelegate,UITableViewDataSource{
         
     }
     
+    func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool) {
+        if  let tableView = scrollView as? UITableView{
+            if tableView == self.productsListTableView{
+                if self.refershControl.isRefreshing == true {
+                    print("refer")
+                    self.refershControl.endRefreshing()
+                    self.productsListAPI()
+                }
+            }
+            
+        }
+     }
+    
+}
+
+
+//MARK:- API Calls
+
+extension ProductsListViewController{
+    
+    func productsListAPI(){
+        Indicator.shared.showProgressView(self.view)
+        self.viewModel.productsListAPI { isSuccess, message in
+            Indicator.shared.hideProgressView()
+            if isSuccess{
+                self.productsListTableView.reloadData()
+            }
+            else{
+                self.showToast(message: message)
+            }
+        }
+    }
+    
+    func deleteProduct(for productId:String,at index:Int){
+        Indicator.shared.showProgressView(self.view)
+        viewModel.deleteProductAPI(productId: productId) { isSuccess, message in
+            Indicator.shared.hideProgressView()
+            if isSuccess{
+                self.viewModel.productsListModel.remove(at: index)
+                self.productsListTableView.reloadData()
+            }
+            else{
+                self.showToast(message: message)
+            }
+        }
+    }
 }

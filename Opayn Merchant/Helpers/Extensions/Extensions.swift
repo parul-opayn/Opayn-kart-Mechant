@@ -243,11 +243,21 @@ extension UIViewController{
     
     func updateCollectionHeight(collectionName : UICollectionView , collectionHeight : NSLayoutConstraint){
         var frame = collectionName.frame
-        frame.size.height = collectionName.contentSize.height
+        frame.size.height = collectionName.collectionViewLayout.collectionViewContentSize.height
         collectionName.frame = frame
         collectionName.reloadData()
-        //collectionName.layoutIfNeeded()
-        collectionHeight.constant = CGFloat(collectionName.contentSize.height)
+        collectionName.layoutIfNeeded()
+        
+        let width = collectionName.collectionViewLayout.collectionViewContentSize.width
+        let height = collectionName.collectionViewLayout.collectionViewContentSize.height
+        
+        if width < 1 || height < 1{
+            collectionHeight.constant = CGFloat(0)
+        }
+        else{
+            collectionHeight.constant = CGFloat(height)
+        }
+        
         collectionName.reloadData()
     }
     

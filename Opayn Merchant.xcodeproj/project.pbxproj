@@ -90,6 +90,7 @@
 		33A93AF926DDFDE800FB8681 /* ProductsListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33A93AF826DDFDE800FB8681 /* ProductsListTableViewCell.swift */; };
 		33A93AFC26DE214400FB8681 /* OrdersListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33A93AFB26DE214400FB8681 /* OrdersListViewController.swift */; };
 		33A93AFF26DE283D00FB8681 /* AddProductViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33A93AFE26DE283D00FB8681 /* AddProductViewController.swift */; };
+		33D5718026DF7A5A006D6C6B /* ProductsListMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33D5717F26DF7A5A006D6C6B /* ProductsListMode.swift */; };
 		33F10F0B26DCDF140028A4C2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33F10F0A26DCDF140028A4C2 /* AppDelegate.swift */; };
 		33F10F0D26DCDF140028A4C2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33F10F0C26DCDF140028A4C2 /* SceneDelegate.swift */; };
 		33F10F1226DCDF140028A4C2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 33F10F1026DCDF140028A4C2 /* Main.storyboard */; };
@@ -200,6 +201,7 @@
 		33A93AF826DDFDE800FB8681 /* ProductsListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsListTableViewCell.swift; sourceTree = "<group>"; };
 		33A93AFB26DE214400FB8681 /* OrdersListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrdersListViewController.swift; sourceTree = "<group>"; };
 		33A93AFE26DE283D00FB8681 /* AddProductViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddProductViewController.swift; sourceTree = "<group>"; };
+		33D5717F26DF7A5A006D6C6B /* ProductsListMode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsListMode.swift; sourceTree = "<group>"; };
 		33F10F0726DCDF140028A4C2 /* Opayn Merchant.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Opayn Merchant.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		33F10F0A26DCDF140028A4C2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		33F10F0C26DCDF140028A4C2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -589,6 +591,7 @@
 				335C495526DE505300F0A96C /* UserDefault.swift */,
 				335C495826DE505400F0A96C /* WishlistDataMode;.swift */,
 				335C495D26DE505400F0A96C /* WishlistDataModel.swift */,
+				33D5717F26DF7A5A006D6C6B /* ProductsListMode.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -972,6 +975,7 @@
 				33A93AE026DDEA5800FB8681 /* ResetPasswordViewController.swift in Sources */,
 				33A93ADA26DDE9E900FB8681 /* ForgotPasswordViewController.swift in Sources */,
 				33A93AE526DDEB7300FB8681 /* AddressTableViewCell.swift in Sources */,
+				33D5718026DF7A5A006D6C6B /* ProductsListMode.swift in Sources */,
 				335C493226DE2B2200F0A96C /* ImagesCollectionViewCell.swift in Sources */,
 				335C494426DE4F5700F0A96C /* ForgotPasswordViewModel.swift in Sources */,
 				33A93AE826DDEBE600FB8681 /* AboutUsViewController.swift in Sources */,

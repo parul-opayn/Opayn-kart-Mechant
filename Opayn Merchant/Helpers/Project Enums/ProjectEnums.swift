@@ -37,3 +37,9 @@ enum leftBarButtonType{
     case menu
     
 }
+
+
+enum AddProductFor {
+    case add
+    case edit
+}
