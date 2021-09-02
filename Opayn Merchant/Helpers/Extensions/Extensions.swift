@@ -246,6 +246,8 @@ extension UIViewController{
         frame.size.height = collectionName.collectionViewLayout.collectionViewContentSize.height
         collectionName.frame = frame
         collectionName.reloadData()
+        collectionName.reloadData()
+        collectionName.reloadData()
         collectionName.layoutIfNeeded()
         
         let width = collectionName.collectionViewLayout.collectionViewContentSize.width

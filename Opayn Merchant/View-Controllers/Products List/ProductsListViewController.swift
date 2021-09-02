@@ -24,13 +24,13 @@ class ProductsListViewController: UIViewController {
         super.viewDidLoad()
         productsListTableView.delegate = self
         productsListTableView.dataSource = self
-        productsListAPI()
         self.productsListTableView.refreshControl = self.refershControl
         refershControl.addTarget(self, action: #selector(refreshView(refresh:)), for: .editingChanged)
     }
     
     override func viewWillAppear(_ animated: Bool) {
         self.navigationController?.isNavigationBarHidden = false
+        productsListAPI()
         self.navigationWithBack(navtTitle: "Products List", icon: #imageLiteral(resourceName: "menu"), buttonType: .menu)
     }
     
@@ -92,7 +92,8 @@ extension ProductsListViewController:UITableViewDelegate,UITableViewDataSource{
 
         deleteAction.image = UIImage(named: "delete")?.withTintColor(.black)
         editAction.image = UIImage(named: "edit-1")
-        deleteAction.backgroundColor = .clear
+        deleteAction.backgroundColor = UIColor(named: "Lighter gray")
+        editAction.backgroundColor = UIColor(named: "Lighter gray")
         let swipeActionConfig = UISwipeActionsConfiguration(actions: [deleteAction,editAction])
         swipeActionConfig.performsFirstActionWithFullSwipe = false
         return swipeActionConfig

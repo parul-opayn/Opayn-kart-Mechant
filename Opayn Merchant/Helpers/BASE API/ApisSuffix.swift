@@ -33,6 +33,8 @@ enum APISuffix {
     case editProduct
     case updateProduct
     case deleteImage
+    case ordersList
+    case changeOrderStatus
     
     func getDescription() -> String {
         
@@ -111,6 +113,12 @@ enum APISuffix {
             
         case .deleteImage:
             return "api/v1/delete-product-image"
+            
+        case .ordersList:
+            return "api/v1/merchant/orders"
+            
+        case .changeOrderStatus:
+            return "api/v1/merchant/order"
         }
         
     }
@@ -128,7 +136,7 @@ enum URLS {
         switch self {
         
         case .baseUrl :
-            return "http://6275-180-188-237-46.ngrok.io/"
+            return "http://9b83-180-188-237-46.ngrok.io/"
             
         case .googlePlaces:
             return "https://maps.googleapis.com/maps/api/place/autocomplete/json?key="

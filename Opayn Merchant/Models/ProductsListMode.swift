@@ -16,12 +16,14 @@ struct ProductsListElement: Codable {
     let description:String?
     let cat_id: String?
     let sub_cat_id: String?
+    let quantity:String?
 
     enum CodingKeys: String, CodingKey {
         case id, name
         case regularPrice = "regular_price"
         case salePrice = "sale_price"
         case discount, images,description,cat_id,sub_cat_id
+        case quantity = "stock"
     }
 }
 

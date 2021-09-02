@@ -20,8 +20,14 @@ class ProductsListTableViewCell: UITableViewCell {
     
     
     //---------------Orders List----------------
+    @IBOutlet weak var quantityLbl: UILabel!
     
-    //MARK:- IBOutlets
+    //---------------SubOrders------------
+    
+    @IBOutlet weak var dateLbl: UILabel!
+    @IBOutlet weak var subProductName: UILabel!
+    @IBOutlet weak var acceptBtn: UIButton!
+    @IBOutlet weak var rejectBtn: UIButton!
     
  
     

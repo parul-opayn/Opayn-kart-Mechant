@@ -35,6 +35,9 @@
 		335C496A26DE505400F0A96C /* SlidersModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 335C495B26DE505400F0A96C /* SlidersModel.swift */; };
 		335C496B26DE505400F0A96C /* FAQDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 335C495C26DE505400F0A96C /* FAQDataModel.swift */; };
 		335C496C26DE505400F0A96C /* WishlistDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 335C495D26DE505400F0A96C /* WishlistDataModel.swift */; };
+		339B1B5F26E0B01A00453273 /* OrdersListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 339B1B5E26E0B01A00453273 /* OrdersListViewModel.swift */; };
+		339B1B6126E0B11600453273 /* OrdersListDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 339B1B6026E0B11600453273 /* OrdersListDataModel.swift */; };
+		339B1B6426E0B69100453273 /* SubOrdersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 339B1B6326E0B69100453273 /* SubOrdersViewController.swift */; };
 		33A93A7026DDE63500FB8681 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33A93A6F26DDE63500FB8681 /* LoginViewController.swift */; };
 		33A93AA926DDE6A500FB8681 /* Indicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33A93A7326DDE6A500FB8681 /* Indicator.swift */; };
 		33A93AAA26DDE6A500FB8681 /* CustomImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33A93A7526DDE6A500FB8681 /* CustomImagePicker.swift */; };
@@ -146,6 +149,9 @@
 		335C495B26DE505400F0A96C /* SlidersModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SlidersModel.swift; sourceTree = "<group>"; };
 		335C495C26DE505400F0A96C /* FAQDataModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FAQDataModel.swift; sourceTree = "<group>"; };
 		335C495D26DE505400F0A96C /* WishlistDataModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WishlistDataModel.swift; sourceTree = "<group>"; };
+		339B1B5E26E0B01A00453273 /* OrdersListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrdersListViewModel.swift; sourceTree = "<group>"; };
+		339B1B6026E0B11600453273 /* OrdersListDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrdersListDataModel.swift; sourceTree = "<group>"; };
+		339B1B6326E0B69100453273 /* SubOrdersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubOrdersViewController.swift; sourceTree = "<group>"; };
 		33A93A6F26DDE63500FB8681 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		33A93A7326DDE6A500FB8681 /* Indicator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Indicator.swift; sourceTree = "<group>"; };
 		33A93A7526DDE6A500FB8681 /* CustomImagePicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomImagePicker.swift; sourceTree = "<group>"; };
@@ -264,6 +270,14 @@
 				76A64350C6A78B1542C3D26A /* Pods-Opayn MerchantTests.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		339B1B6226E0B67100453273 /* SubOrders */ = {
+			isa = PBXGroup;
+			children = (
+				339B1B6326E0B69100453273 /* SubOrdersViewController.swift */,
+			);
+			path = SubOrders;
 			sourceTree = "<group>";
 		};
 		33A93A7126DDE6A500FB8681 /* Helpers */ = {
@@ -592,6 +606,7 @@
 				335C495826DE505400F0A96C /* WishlistDataMode;.swift */,
 				335C495D26DE505400F0A96C /* WishlistDataModel.swift */,
 				33D5717F26DF7A5A006D6C6B /* ProductsListMode.swift */,
+				339B1B6026E0B11600453273 /* OrdersListDataModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -599,6 +614,7 @@
 		33F10F3B26DCDFF20028A4C2 /* View-Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				339B1B6226E0B67100453273 /* SubOrders */,
 				33A93AFD26DE282D00FB8681 /* Add product */,
 				33A93AFA26DE213000FB8681 /* Orders List */,
 				33A93AF526DDFB8D00FB8681 /* Products List */,
@@ -627,6 +643,7 @@
 				335C493D26DE4F5700F0A96C /* ProductDetailsViewModel.swift */,
 				335C493426DE4F5600F0A96C /* ProductsCategoryViewModel.swift */,
 				335C493926DE4F5700F0A96C /* SignupViewModel.swift */,
+				339B1B5E26E0B01A00453273 /* OrdersListViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -925,12 +942,14 @@
 				33A93AE326DDEB1100FB8681 /* SideMenuViewController.swift in Sources */,
 				33A93AD626DDE74100FB8681 /* WalkThroughCollectionViewCell.swift in Sources */,
 				33A93A7026DDE63500FB8681 /* LoginViewController.swift in Sources */,
+				339B1B6126E0B11600453273 /* OrdersListDataModel.swift in Sources */,
 				33A93AAE26DDE6A500FB8681 /* ResponsetHeaderFields.swift in Sources */,
 				33A93AFF26DE283D00FB8681 /* AddProductViewController.swift in Sources */,
 				335C496826DE505400F0A96C /* ProductDetailsDataModel.swift in Sources */,
 				33A93AF426DDF0CB00FB8681 /* SignupViewController.swift in Sources */,
 				335C495F26DE505400F0A96C /* ProductsDataModel.swift in Sources */,
 				335C494B26DE4F5700F0A96C /* ProductDetailsViewModel.swift in Sources */,
+				339B1B6426E0B69100453273 /* SubOrdersViewController.swift in Sources */,
 				33A93AEB26DDEC4200FB8681 /* FAQViewController.swift in Sources */,
 				335C496B26DE505400F0A96C /* FAQDataModel.swift in Sources */,
 				33A93AAB26DDE6A500FB8681 /* CollectionViewHeightAdjuster.swift in Sources */,
@@ -976,6 +995,7 @@
 				33A93ADA26DDE9E900FB8681 /* ForgotPasswordViewController.swift in Sources */,
 				33A93AE526DDEB7300FB8681 /* AddressTableViewCell.swift in Sources */,
 				33D5718026DF7A5A006D6C6B /* ProductsListMode.swift in Sources */,
+				339B1B5F26E0B01A00453273 /* OrdersListViewModel.swift in Sources */,
 				335C493226DE2B2200F0A96C /* ImagesCollectionViewCell.swift in Sources */,
 				335C494426DE4F5700F0A96C /* ForgotPasswordViewModel.swift in Sources */,
 				33A93AE826DDEBE600FB8681 /* AboutUsViewController.swift in Sources */,

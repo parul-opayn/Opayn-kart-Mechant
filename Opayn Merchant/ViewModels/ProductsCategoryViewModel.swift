@@ -120,9 +120,9 @@ class ProductsCategoryViewModel: BaseAPI {
 //    }
     
     
-    func addProduct(productId:String?,catId:String,subCatId:String,name:String,description:String,regularPrice:String,salePrice:String,fileName:[String],fileType:[String],fileParam:[String],fileData:[Data],completion:@escaping(Bool,String)->()){
+    func addProduct(productId:String?,catId:String,subCatId:String,name:String,description:String,regularPrice:String,salePrice:String,fileName:[String],fileType:[String],fileParam:[String],fileData:[Data],quantity:String,completion:@escaping(Bool,String)->()){
         
-        var param = ["cat_id":catId,"sub_cat_id":subCatId,"name":name,"description":description,"regular_price":regularPrice,"sale_price":salePrice] as baseParameters
+        var param = ["cat_id":catId,"sub_cat_id":subCatId,"name":name,"description":description,"regular_price":regularPrice,"sale_price":salePrice,"stock":quantity] as baseParameters
         
         var request:RequestFilesData?
         
@@ -244,7 +244,7 @@ class ProductsCategoryViewModel: BaseAPI {
     
     //MARK:- Validations
     
-    func addProductValidation(title:String,des:String,salePrice:String,regularPrice:String,category:String)->(Bool,String){
+    func addProductValidation(title:String,des:String,salePrice:String,regularPrice:String,category:String,quantity:String)->(Bool,String){
         if (title.replacingOccurrences(of: " ", with: "") == "") && (des.replacingOccurrences(of: " ", with: "") == "") && (salePrice.replacingOccurrences(of: " ", with: "") == "") && (regularPrice.replacingOccurrences(of: " ", with: "") == "") && (category.replacingOccurrences(of: " ", with: "") == ""){
             return(false,"Please fill all the required details.")
         }
@@ -265,6 +265,9 @@ class ProductsCategoryViewModel: BaseAPI {
         }
         else if (Double(salePrice) ?? 0.0) > (Double(regularPrice) ?? 0.0){
             return(false,"Sale price can't be greater than regular price")
+        }
+        else if (quantity.replacingOccurrences(of: " ", with: "")) == ""{
+            return(false,"Please enter product quantity")
         }
         else{
             return(true,"success")

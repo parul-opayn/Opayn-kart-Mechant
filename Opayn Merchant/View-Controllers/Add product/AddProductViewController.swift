@@ -25,11 +25,11 @@ class AddProductViewController: UIViewController {
     @IBOutlet weak var salePriceTxtFld: UITextField!
     @IBOutlet weak var regularPriceTxtFld: UITextField!
     @IBOutlet weak var addProductBtn: SetButton!
+    @IBOutlet weak var quanittyTxtFld: UITextField!
     
     //MARK:- Variables
     
     var images = [UIImage]()
-    let imagePicker = OpalImagePickerController()
     var viewModel = ProductsCategoryViewModel()
     var categoriesData = [String]()
     var subCategoriesData = [String]()
@@ -74,6 +74,7 @@ class AddProductViewController: UIViewController {
         self.categoryLbl.text = filterCategory?.first?.name ?? ""
         self.subcategoryLbl.text = subCategory?.first?.name ?? ""
         self.addProductBtn.setTitle("Update Product", for: .normal)
+        self.quanittyTxtFld.text = model.quantity ?? ""
     }
     
     //MARK:- Objc Methods
@@ -83,12 +84,15 @@ class AddProductViewController: UIViewController {
             self.images.remove(at: sender.tag)
         }
         else{
-            if sender.tag <= (self.viewModel.productsListModel[editForIndex].images?.count ?? 0){
-                self.viewModel.productsListModel[editForIndex].images?.remove(at: sender.tag)
+            if sender.tag < (self.viewModel.productsListModel[editForIndex].images?.count ?? 0){
+                deleteImage(productId: (viewModel.productsListModel[editForIndex].id ?? ""), image: (viewModel.productsListModel[editForIndex].images?[sender.tag] ?? ""), tag: sender.tag)
             }
             else{
                 let total = ((viewModel.productsListModel[editForIndex].images?.count ?? 0) + images.count)
-                self.images.remove(at: (total - sender.tag) - 1)
+                let deleteFrom = abs(total - sender.tag - images.count)
+                print("delete for \(deleteFrom)")
+                self.images.remove(at: deleteFrom)
+               
             }
         }
         self.imagesCollectionView.reloadData()
@@ -98,10 +102,26 @@ class AddProductViewController: UIViewController {
     //MARK:- IBActions
     
     @IBAction func tappedAddImagesBtn(_ sender: UIButton) {
-        
+        let imagePicker = OpalImagePickerController()
         imagePicker.imagePickerDelegate = self
-        imagePicker.maximumSelectionsAllowed = 5
-        present(imagePicker, animated: true, completion: nil)
+        
+        var total = 0
+        if displayDataFor == .add{
+            total = images.count
+        }
+        else{
+            total = ((viewModel.productsListModel[editForIndex].images?.count ?? 0) + images.count)
+        }
+        
+        if total >= 5{
+            self.showToast(message: "Only 5 images are allowed to upload.")
+            
+        }
+        else{
+            imagePicker.maximumSelectionsAllowed = 5 - total
+            present(imagePicker, animated: true, completion: nil)
+        }
+      
     }
     
     
@@ -146,7 +166,7 @@ class AddProductViewController: UIViewController {
     }
     
     @IBAction func tappedAddProduct(_ sender: UIButton) {
-        let validate = viewModel.addProductValidation(title: titleTxtFld.text ?? "", des: descriptionTxtView.text ?? "", salePrice: salePriceTxtFld.text ?? "", regularPrice: regularPriceTxtFld.text ?? "", category: self.categoryLbl.text ?? "")
+        let validate = viewModel.addProductValidation(title: titleTxtFld.text ?? "", des: descriptionTxtView.text ?? "", salePrice: salePriceTxtFld.text ?? "", regularPrice: regularPriceTxtFld.text ?? "", category: self.categoryLbl.text ?? "",quantity: self.quanittyTxtFld.text ?? "")
         if validate.0{
             if displayDataFor == .add{
                 addProductAPI(id: nil)
@@ -177,14 +197,23 @@ extension AddProductViewController:UICollectionViewDelegate,UICollectionViewData
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+       
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ImagesCollectionViewCell", for: indexPath) as! ImagesCollectionViewCell
-        if indexPath.row <= ((viewModel.productsListModel[editForIndex].images?.count ?? 0) - 1){
-            cell.productImageView.sd_setImage(with: URL(string: viewModel.productsListModel[editForIndex].images?[indexPath.row] ?? ""), placeholderImage: #imageLiteral(resourceName: "placeholder Image"),options: .highPriority, completed: nil)
+        
+        if displayDataFor == .add{
+            cell.productImageView.image = self.images[indexPath.row]
         }
         else{
-            let calculateIndex = ((viewModel.productsListModel[editForIndex].images?.count ?? 0) + images.count) - indexPath.row
-            cell.productImageView.image = self.images[calculateIndex]
+            if  (indexPath.row <= ((viewModel.productsListModel[editForIndex].images?.count ?? 0) - 1)){
+                cell.productImageView.sd_setImage(with: URL(string: viewModel.productsListModel[editForIndex].images?[indexPath.row] ?? ""), placeholderImage: #imageLiteral(resourceName: "placeholder Image"),options: .highPriority, completed: nil)
+            }
+            else{
+                let total = ((viewModel.productsListModel[editForIndex].images?.count ?? 0) + images.count)
+                let calculateIndex = abs(total - indexPath.row - images.count)
+                cell.productImageView.image = self.images[calculateIndex]
+            }
         }
+       
         cell.deleteImageBtn.tag = indexPath.row
         cell.deleteImageBtn.addTarget(self, action: #selector(didTapDelete), for: .touchUpInside)
         return cell
@@ -217,6 +246,8 @@ extension AddProductViewController:OpalImagePickerControllerDelegate{
         self.images.append(contentsOf:self.getAssetThumbnail(assets: assets))
         self.imagesCollectionView.reloadData()
         self.updateCollectionHeight(collectionName: self.imagesCollectionView, collectionHeight: self.collectionHeight)
+        self.imagesCollectionView.reloadData()
+        self.updateCollectionHeight(collectionName: self.imagesCollectionView, collectionHeight: self.collectionHeight)
     }
 }
 
@@ -240,12 +271,14 @@ extension AddProductViewController{
         }
     }
     
-    func deleteImage(productId:String,image:String){
+    func deleteImage(productId:String,image:String,tag:Int){
         Indicator.shared.showProgressView(self.view)
         self.viewModel.deleteImagesAPI(productId: productId, image: image) { isSuccess, message in
             Indicator.shared.hideProgressView()
             if isSuccess{
+                self.viewModel.productsListModel[self.editForIndex].images?.remove(at: tag)
                 self.imagesCollectionView.reloadData()
+                self.updateCollectionHeight(collectionName: self.imagesCollectionView, collectionHeight: self.collectionHeight)
             }
             else{
                 self.showToast(message: message)
@@ -273,7 +306,7 @@ extension AddProductViewController{
             fileType.append("image/png")
         }
         
-        viewModel.addProduct(productId:id,catId: self.selectedCatId, subCatId: self.selectedSubCatId, name: titleTxtFld.text ?? "", description: descriptionTxtView.text ?? "", regularPrice: self.regularPriceTxtFld.text ?? "", salePrice: self.salePriceTxtFld.text ?? "", fileName: fileNames, fileType: fileType, fileParam: fileParams, fileData: fileData) { isSuccess, message in
+        viewModel.addProduct(productId:id,catId: self.selectedCatId, subCatId: self.selectedSubCatId, name: titleTxtFld.text ?? "", description: descriptionTxtView.text ?? "", regularPrice: self.regularPriceTxtFld.text ?? "", salePrice: self.salePriceTxtFld.text ?? "", fileName: fileNames, fileType: fileType, fileParam: fileParams, fileData: fileData, quantity: self.quanittyTxtFld.text ?? "") { isSuccess, message in
             Indicator.shared.hideProgressView()
             if isSuccess{
                 
