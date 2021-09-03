@@ -18,8 +18,23 @@
 	<string>1.0</string>
 	<key>CFBundleVersion</key>
 	<string>1</string>
+	<key>LSApplicationCategoryType</key>
+	<string></string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
+	<key>NSAppTransportSecurity</key>
+	<dict>
+		<key>NSAllowsArbitraryLoads</key>
+		<true/>
+	</dict>
+	<key>NSCameraUsageDescription</key>
+	<string>Please allow this app to access your Camera for profile photos creation and adding product images.</string>
+	<key>NSFileProviderDomainUsageDescription</key>
+	<string>Please allow this app to access your Media for profile photos creation and adding product images.</string>
+	<key>NSPhotoLibraryAddUsageDescription</key>
+	<string>Please allow this app to access your Media for profile photos creation and adding product images.</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>Please allow this app to access your Photos</string>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
 		<key>UIApplicationSupportsMultipleScenes</key>
@@ -55,21 +70,6 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
-	<key>LSApplicationCategoryType</key>
-	<string></string>
-	<key>NSPhotoLibraryUsageDescription</key>
-	<string>Please allow this app to access your Photos</string>
-	<key>NSFileProviderDomainUsageDescription</key>
-	<string>Please allow this app to access your Media for profile photos creation and adding product images.</string>
-	<key>NSPhotoLibraryAddUsageDescription</key>
-	<string>Please allow this app to access your Media for profile photos creation and adding product images.</string>
-	<key>NSCameraUsageDescription</key>
-	<string>Please allow this app to access your Camera for profile photos creation and adding product images.</string>
-	<key>NSAppTransportSecurity</key>
-	<dict>
-		<key>NSAllowsArbitraryLoads</key>
-		<true/>
-	</dict>
 	<key>UISupportedInterfaceOrientations~ipad</key>
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>

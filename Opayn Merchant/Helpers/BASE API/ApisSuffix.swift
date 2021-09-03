@@ -136,7 +136,7 @@ enum URLS {
         switch self {
         
         case .baseUrl :
-            return "http://9b83-180-188-237-46.ngrok.io/"
+            return "http://3.22.185.42/opaynkart-api/public/"
             
         case .googlePlaces:
             return "https://maps.googleapis.com/maps/api/place/autocomplete/json?key="

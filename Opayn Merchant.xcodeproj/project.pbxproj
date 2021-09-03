@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		10D9146608F708F41AB3FC2E /* Pods_Opayn_MerchantTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A8EA9C5C319AFC248BEF0CF /* Pods_Opayn_MerchantTests.framework */; };
 		229EF76FFB4E9C45CAC59631 /* Pods_Opayn_Merchant_Opayn_MerchantUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD163E28512F2222921A185F /* Pods_Opayn_Merchant_Opayn_MerchantUITests.framework */; };
+		334483AD26E1F0C000991EF7 /* LoginModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 334483AC26E1F0C000991EF7 /* LoginModel.swift */; };
 		335C493226DE2B2200F0A96C /* ImagesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 335C493126DE2B2200F0A96C /* ImagesCollectionViewCell.swift */; };
 		335C494226DE4F5700F0A96C /* ProductsCategoryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 335C493426DE4F5600F0A96C /* ProductsCategoryViewModel.swift */; };
 		335C494326DE4F5700F0A96C /* GeneralContentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 335C493526DE4F5600F0A96C /* GeneralContentViewModel.swift */; };
@@ -24,7 +25,6 @@
 		335C495F26DE505400F0A96C /* ProductsDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 335C495026DE505300F0A96C /* ProductsDataModel.swift */; };
 		335C496026DE505400F0A96C /* PlacesDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 335C495126DE505300F0A96C /* PlacesDataModel.swift */; };
 		335C496126DE505400F0A96C /* MyProfileModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 335C495226DE505300F0A96C /* MyProfileModel.swift */; };
-		335C496226DE505400F0A96C /* LoginModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 335C495326DE505300F0A96C /* LoginModel.swift */; };
 		335C496326DE505400F0A96C /* MyOrdersDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 335C495426DE505300F0A96C /* MyOrdersDataModel.swift */; };
 		335C496426DE505400F0A96C /* UserDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = 335C495526DE505300F0A96C /* UserDefault.swift */; };
 		335C496526DE505400F0A96C /* CartListDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 335C495626DE505300F0A96C /* CartListDataModel.swift */; };
@@ -123,6 +123,7 @@
 
 /* Begin PBXFileReference section */
 		2F5353130073FDA0016D6A84 /* Pods-Opayn Merchant-Opayn MerchantUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Opayn Merchant-Opayn MerchantUITests.release.xcconfig"; path = "Target Support Files/Pods-Opayn Merchant-Opayn MerchantUITests/Pods-Opayn Merchant-Opayn MerchantUITests.release.xcconfig"; sourceTree = "<group>"; };
+		334483AC26E1F0C000991EF7 /* LoginModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginModel.swift; sourceTree = "<group>"; };
 		335C493126DE2B2200F0A96C /* ImagesCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagesCollectionViewCell.swift; sourceTree = "<group>"; };
 		335C493426DE4F5600F0A96C /* ProductsCategoryViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductsCategoryViewModel.swift; sourceTree = "<group>"; };
 		335C493526DE4F5600F0A96C /* GeneralContentViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GeneralContentViewModel.swift; sourceTree = "<group>"; };
@@ -138,7 +139,6 @@
 		335C495026DE505300F0A96C /* ProductsDataModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductsDataModel.swift; sourceTree = "<group>"; };
 		335C495126DE505300F0A96C /* PlacesDataModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlacesDataModel.swift; sourceTree = "<group>"; };
 		335C495226DE505300F0A96C /* MyProfileModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyProfileModel.swift; sourceTree = "<group>"; };
-		335C495326DE505300F0A96C /* LoginModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginModel.swift; path = "../../../OpaynKart 30 aug 21/OpaynKart/Models/LoginModel.swift"; sourceTree = "<group>"; };
 		335C495426DE505300F0A96C /* MyOrdersDataModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyOrdersDataModel.swift; sourceTree = "<group>"; };
 		335C495526DE505300F0A96C /* UserDefault.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDefault.swift; sourceTree = "<group>"; };
 		335C495626DE505300F0A96C /* CartListDataModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CartListDataModel.swift; sourceTree = "<group>"; };
@@ -595,7 +595,6 @@
 				335C495726DE505400F0A96C /* CategoriesModel.swift */,
 				335C495C26DE505400F0A96C /* FAQDataModel.swift */,
 				335C494F26DE505300F0A96C /* GenralContentModel.swift */,
-				335C495326DE505300F0A96C /* LoginModel.swift */,
 				335C495426DE505300F0A96C /* MyOrdersDataModel.swift */,
 				335C495226DE505300F0A96C /* MyProfileModel.swift */,
 				335C495126DE505300F0A96C /* PlacesDataModel.swift */,
@@ -607,6 +606,7 @@
 				335C495D26DE505400F0A96C /* WishlistDataModel.swift */,
 				33D5717F26DF7A5A006D6C6B /* ProductsListMode.swift */,
 				339B1B6026E0B11600453273 /* OrdersListDataModel.swift */,
+				334483AC26E1F0C000991EF7 /* LoginModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -945,6 +945,7 @@
 				339B1B6126E0B11600453273 /* OrdersListDataModel.swift in Sources */,
 				33A93AAE26DDE6A500FB8681 /* ResponsetHeaderFields.swift in Sources */,
 				33A93AFF26DE283D00FB8681 /* AddProductViewController.swift in Sources */,
+				334483AD26E1F0C000991EF7 /* LoginModel.swift in Sources */,
 				335C496826DE505400F0A96C /* ProductDetailsDataModel.swift in Sources */,
 				33A93AF426DDF0CB00FB8681 /* SignupViewController.swift in Sources */,
 				335C495F26DE505400F0A96C /* ProductsDataModel.swift in Sources */,
@@ -955,7 +956,6 @@
 				33A93AAB26DDE6A500FB8681 /* CollectionViewHeightAdjuster.swift in Sources */,
 				33A93AF726DDFB9C00FB8681 /* ProductsListViewController.swift in Sources */,
 				335C496926DE505400F0A96C /* AddressListModel.swift in Sources */,
-				335C496226DE505400F0A96C /* LoginModel.swift in Sources */,
 				33A93AB326DDE6A500FB8681 /* TableCollectionErrors.swift in Sources */,
 				33A93AB226DDE6A500FB8681 /* Alert.swift in Sources */,
 				33A93AB426DDE6A500FB8681 /* DesignableTextField.swift in Sources */,
@@ -1177,15 +1177,17 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 39C6F55X9T;
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = 3BNKP72G3V;
 				INFOPLIST_FILE = "Opayn Merchant/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.opaynKart.Opayn-Merchant";
+				PRODUCT_BUNDLE_IDENTIFIER = com.opaynKartBusiness;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = OpaynBusiness_Dis;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -1197,15 +1199,17 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 39C6F55X9T;
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = 3BNKP72G3V;
 				INFOPLIST_FILE = "Opayn Merchant/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.opaynKart.Opayn-Merchant";
+				PRODUCT_BUNDLE_IDENTIFIER = com.opaynKartBusiness;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = OpaynBusiness_Dis;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

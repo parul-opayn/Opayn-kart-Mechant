@@ -269,6 +269,9 @@ class ProductsCategoryViewModel: BaseAPI {
         else if (quantity.replacingOccurrences(of: " ", with: "")) == ""{
             return(false,"Please enter product quantity")
         }
+        else if (Int(quantity) ?? 0) <= 0{
+            return(false,"Please add atleast 1 unit for quantity")
+        }
         else{
             return(true,"success")
         }
